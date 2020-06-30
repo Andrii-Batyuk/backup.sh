@@ -9,4 +9,4 @@ else
     echo "Is not equal"
 fi
 
-echo  "Some Text"
+echo  "Some more text"
