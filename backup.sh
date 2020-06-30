@@ -1,11 +1,8 @@
 #!/bin/bash
 echo "Hello, World!"
 
-<<<<<<< Updated upstream
-if [ 1 = 1]
 =======
-if [ 1 eq 1];
->>>>>>> Stashed changes
+if [ 1 eg 1]
 
 then 
     echo "Is equal"
