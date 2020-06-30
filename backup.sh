@@ -1,8 +1,7 @@
 #!/bin/bash
 echo "Hello, World!"
 
-=======
-if [ 1 -eg 1]
+if [ 1 -eq 1]
 
 then 
     echo "Is equal"
