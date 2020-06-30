@@ -8,5 +8,3 @@ then
 else
     echo "Is not equal"
 fi
-
-echo  "Some more text"
