@@ -1,10 +1,25 @@
-#!/bin/bash
-echo "Hello, World!"
+#!groovy
+// Check ub1 properties
+properties([disableConcurrentBuilds()])
 
-if [ "1" -eq "1" ]
-
-then 
-    echo "Is equal"
-else
-    echo "Is not equal"
-fi
+pipeline {
+    agent { 
+        label 'master'
+        }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("First step") {
+            steps {
+                sh 'ssh root@ub1 \'hostname\''
+            }
+        }
+        stage("Second step") {
+            steps {
+                sh 'ssh root@ub1 \'uptime\''
+            }
+        }
+    }
+}
